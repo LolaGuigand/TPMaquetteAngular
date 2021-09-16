@@ -1,0 +1,27 @@
+input{
+  width:660px;
+  margin-left: 10px;
+  border-color: darkslategray;
+  border-radius: 6px;
+  box-shadow: #4d072a 2px 2px 3px;
+}
+
+textarea{
+  width:700px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 6px;
+  border-color: darkslategray;
+  overflow-y:scroll;
+  box-shadow: #4d072a 2px 2px 3px;
+}
+
+button{
+  background-color:  #0a7878;
+  color: aliceblue;
+  box-shadow: #4d072a 2px 2px 3px;
+  border-radius: 6px;
+  border-color: darkslategray;
+  text-align: right;
+}

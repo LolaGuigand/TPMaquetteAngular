@@ -1,0 +1,15 @@
+<div *ngIf ="listeActifs.length!==0">
+  <h2>
+    Personnes actives :
+  </h2>
+
+  <ul>
+    <li *ngFor= "let chaquePersonne of listeActifs">
+      <a href="">{{chaquePersonne.pseudo}}</a>
+    </li>
+  </ul>
+
+</div>
+<div *ngIf="listeActifs.length===0">
+  <p><i>C'est bien calme par ici ...</i></p>
+</div>

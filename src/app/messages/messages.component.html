@@ -1,0 +1,16 @@
+<div class="scroller" *ngIf="listeMessages.length!==0">
+<ul >
+  <div class="lesMessages"*ngFor="let chaqueMessage of listeMessages">
+      <label for="quiQuand">
+        <a href="">{{chaqueMessage.auteur.pseudo}}</a> a écrit le {{chaqueMessage.date|date}} :
+      </label>
+      <br>
+        <textarea readonly="readonly">{{chaqueMessage.contenuMessage}}</textarea>
+      <br>
+  </div>
+</ul>
+</div>
+
+<div *ngIf="listeMessages.length===0">
+  <p><i>On joue au roi du silence ici ?</i></p>
+</div>
