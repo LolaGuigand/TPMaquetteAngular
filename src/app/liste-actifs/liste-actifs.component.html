@@ -1,15 +1,25 @@
+
+
 <div *ngIf ="listeActifs.length!==0">
   <h2>
     Personnes actives :
   </h2>
-
+<div id="jolis">
   <ul>
     <li *ngFor= "let chaquePersonne of listeActifs">
       <a href="">{{chaquePersonne.pseudo}}</a>
     </li>
   </ul>
-
 </div>
+</div>
+
+
 <div *ngIf="listeActifs.length===0">
   <p><i>C'est bien calme par ici ...</i></p>
 </div>
+
+
+
+<img src="https://www.transparentpng.com/thumb/dinosaur/fG7uaa-dinosaur-transparent-picture.png" width="220px">
+
+

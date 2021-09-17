@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Personne} from "../Modele/Personne";
+import {MsgService} from "../services/msg.service";
+import {PersonnesService} from "../services/personnes.service";
+import {Message} from "../Modele/Message";
 
 @Component({
   selector: 'app-liste-actifs',
@@ -8,18 +11,21 @@ import {Personne} from "../Modele/Personne";
 })
 export class ListeActifsComponent implements OnInit {
 
+listeActifs : Array<Personne>;
+/*tabMessages : Array<Message>;*/
 
-   personne1: Personne= new Personne("Ginette", 2012);
-   personne2: Personne= new Personne("Bernard", 2012);
-   personne3: Personne= new Personne("kikoolol95", 2018);
-
- listeActifs : Array<Personne>;
-
-  constructor() {
-    this.listeActifs=[this.personne1, this.personne2, this.personne3];
+  constructor(private svc: MsgService) { // injection de dépendance
+/*    this.tabMessages=this.svc.tabMessages;*/
+    this.listeActifs=[];
+    this.listeActifs=this.svc.tabPersonnes;
   }
 
   ngOnInit(): void {
   }
+
+/*    get tabPersonnes():Array<Personne>{
+    for(let chaqueMessage )
+    return this.listeActifs;
+  }*/
 
 }

@@ -1,16 +1,30 @@
-<div>
-  <h2>Nouveau Message :</h2>
-<label for="nouveauMessage">De :</label>
-  <input type="text">
-  <br>
-  <br>
+<div id="letout">
 
-  <label for="message">Message :</label>
-  <textarea></textarea>
-  <br>
+  <form (ngSubmit)="soumettreLeForm(monFormulaire.value)"
+        #monFormulaire="ngForm">
+    <h2>Nouveau Message :</h2>
+  <label for="auteur">De :</label>
+    <input id="auteur" type="text" name="auteur" ngModel>
+    <br>
+    <br>
 
-  <button id="valider">Valider</button>
-  <button id="annuler">Annuler</button>
+    <label for="nouveauMessage">Message :</label>
+    <textarea id="nouveauMessage" name="nouveauMessage" ngModel></textarea>
+    <br>
 
+   <!-- <button id="valider">Valider</button>
+    <button id="annuler">Annuler</button>-->
+</form>
+ <!-- -->
+  <div id="lesImagesBoutons">
+ <img id="aRogner" src="https://www.pngall.com/wp-content/uploads/4/Pterosaurs-PNG-Images.png" width= "140px" height="100px">
+    <figcaption><input id="valider" type="submit" value="Valider"></figcaption>
+ <img src="https://assets.stickpng.com/images/580b585b2edbce24c47b264d.png" width= "140px" height="100px">
+    <figcaption><input id="annuler" type="reset" value="Annuler"></figcaption>
+</div>
+
+  <p>
+    {{monFormulaire.value | json}}
+  </p>
 </div>
 

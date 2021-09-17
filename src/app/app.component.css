@@ -8,9 +8,9 @@
                         "listeActifs messages"
                         "listeActifs nouveauMessage";
   grid-template-columns: 20% 80%;
-  box-shadow:  #29040c 5px 5px 3px;
+  box-shadow:  #4d072a 5px 5px 3px;
   margin-left: auto;
-   margin-right: auto;
+  margin-right: auto;
 
 }
 app-composant-grand-cadre{
@@ -27,12 +27,14 @@ app-liste-actifs{
   color:white;
   padding:30px;
   font-family: 'Oxanium', cursive;
+
 }
 app-messages{
   grid-area: messages;
   border: solid black 2px;
   background-color: #dab004;
   overflow-y:scroll;
+  scrollbar-color: #4d072a green;
   display: flex;
   height:400px;
   padding:20px;

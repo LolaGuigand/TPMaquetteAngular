@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
+import {MsgService} from "../services/msg.service";
+import {Message} from "../Modele/Message";
+import {Personne} from "../Modele/Personne";
 
 @Component({
   selector: 'app-nouveau-message',
@@ -7,7 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NouveauMessageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private svc: MsgService) {}
+
+
+  soumettreLeForm(valeurDuForm:any){
+    console.log("le message est:" + valeurDuForm.value);
+    //Ajouter un message au tableau de messages
+    let msg=new Message(new Personne(valeurDuForm.pseudo), new Date(""), valeurDuForm.nouveauMessage);
+    this.svc.ajouterMessage(msg);
+
+  }
 
   ngOnInit(): void {
   }

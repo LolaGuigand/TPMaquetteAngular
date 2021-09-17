@@ -2,10 +2,10 @@
 <ul >
   <div class="lesMessages"*ngFor="let chaqueMessage of listeMessages">
       <label for="quiQuand">
-        <a href="">{{chaqueMessage.auteur.pseudo}}</a> a écrit le {{chaqueMessage.date|date}} :
+        <a id="quiQuand" href="">{{chaqueMessage.auteur.pseudo}}</a> a écrit le {{chaqueMessage.dateMessage|date}} à {{chaqueMessage.dateMessage|date:'shortTime'}} :
       </label>
       <br>
-        <textarea readonly="readonly">{{chaqueMessage.contenuMessage}}</textarea>
+        <textarea readonly="readonly">{{chaqueMessage.textMessage}}</textarea>
       <br>
   </div>
 </ul>

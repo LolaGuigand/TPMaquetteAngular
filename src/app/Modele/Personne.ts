@@ -1,12 +1,9 @@
 export class Personne {
   private _pseudo :  String;
-  private _id: number;
 
-
-
-  constructor(pseudo: String, id: number) {
+  constructor(pseudo: String) {
     this._pseudo = pseudo;
-    this._id = id;
+
   }
 
   get pseudo(): String {
@@ -17,12 +14,5 @@ export class Personne {
     this._pseudo = value;
   }
 
-  get id(): number {
-    return this._id;
-  }
-
-  set id(value: number) {
-    this._id = value;
-  }
 
 }

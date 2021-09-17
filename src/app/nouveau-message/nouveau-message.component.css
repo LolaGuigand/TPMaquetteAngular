@@ -25,3 +25,24 @@ button{
   border-color: darkslategray;
   text-align: right;
 }
+
+#letout{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#lesImagesBoutons{
+  display:flex;
+  flex-direction: column;
+}
+
+#annuler, #valider{
+  width: 100px;
+  background-color: #de8916;
+}
+
+#annuler:hover, #valider:hover{
+  background-color: yellow;
+}
+
+

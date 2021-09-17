@@ -2,8 +2,18 @@
 ul{
   list-style: none;
 }
-h2{
+h2,i{
 
   text-shadow: rebeccapurple 5px 5px 3px;
   font-size: 150%;
+}
+
+
+#jolis{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+img{
+  padding-top:100px
 }
